@@ -7,3 +7,6 @@ C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWin
 C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.csproj.GenerateResource.Cache
 C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.exe
 C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.pdb
+C:\Users\iah51\Source\Repos\TakeScreenshotOfWindow\TakeScreenshotOfWindow\bin\Debug\TakeScreenshotOfWindow.exe.config
+C:\Users\iah51\Source\Repos\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.exe
+C:\Users\iah51\Source\Repos\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.pdb
