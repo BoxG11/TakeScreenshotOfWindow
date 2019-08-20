@@ -1,0 +1,9 @@
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\bin\Debug\TakeScreenshotOfWindow.exe.config
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\bin\Debug\TakeScreenshotOfWindow.exe
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\bin\Debug\TakeScreenshotOfWindow.pdb
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.csprojResolveAssemblyReference.cache
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.Form1.resources
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.Properties.Resources.resources
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.csproj.GenerateResource.Cache
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.exe
+C:\Users\iah51\Source\Repos\Messenger\TakeScreenshotOfWindow\TakeScreenshotOfWindow\obj\Debug\TakeScreenshotOfWindow.pdb
