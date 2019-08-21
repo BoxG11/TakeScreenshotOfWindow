@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace TakeScreenshotOfWindow
@@ -16,6 +17,10 @@ namespace TakeScreenshotOfWindow
 
         int x, y, w, h;
         string loc;
+        bool Working = false;
+
+        int time = Convert.ToInt32(DateTime.Now.ToString("hmmss"));
+        int timee;
 
         public Bitmap Screenshot()
         {
@@ -128,9 +133,19 @@ namespace TakeScreenshotOfWindow
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            Screenshot();
+            timee = time - 6;
+            Working = true;
+            while (Working == true && time -5 > timee)
+            {
+                Screenshot();
+            }
         }
-        
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            Working = false;
+        }
+
         public void UpdateFormLocation()
         {
             loc = getLocationofWindow();
