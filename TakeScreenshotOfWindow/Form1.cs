@@ -16,28 +16,12 @@ namespace TakeScreenshotOfWindow
 
         int x, y, w, h;
         string loc;
-        int xa = 0;
 
-        public Form1()
+        public Bitmap Screenshot()
         {
-            InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            UpdateFormLocation();
             
-            loc = getLocationofWindow();
-
-            y = StringToIntLocationY(loc);
-            x = StringToIntLocationX(loc);
-            h = StringToIntLocationH(loc);
-            w = StringToIntLocationW(loc);
-            
-        }
-
-
-        public Bitmap Screenshot(int x, int y, int h, int w)
-        {
+            //Take Screenshot
             Bitmap bmpScreenshot = new Bitmap(w-14, h-37);
 
             Graphics g = Graphics.FromImage(bmpScreenshot);
@@ -46,7 +30,6 @@ namespace TakeScreenshotOfWindow
 
             g.CopyFromScreen(y+7,x+30,0,0, new Size(w-14, h-37));
             bmpScreenshot.Save(FileLocation, ImageFormat.Png);
-            xa++;
             return bmpScreenshot;
         }
 
@@ -64,7 +47,7 @@ namespace TakeScreenshotOfWindow
         }
         
         //converts location string to single intgers x y width and height
-        public int StringToIntLocationX(string LocString)
+        public int StringToIntLocationX()
         {
             string LocationOfWindow = getLocationofWindow();
             string stringx;
@@ -76,16 +59,51 @@ namespace TakeScreenshotOfWindow
 
             return x;
         }
+        public int StringToIntLocationY()
+        {
+            string LocationOfWindow = getLocationofWindow();
+            string stringy;
 
+            string[] tmp = LocationOfWindow.Split(',');
+            stringy = tmp[1];
+
+            y = Convert.ToInt32(stringy);
+
+            return y;
+        }
+        public int StringToIntLocationW()
+        {
+            string LocationOfWindow = getLocationofWindow();
+            string stringw;
+
+            string[] tmp = LocationOfWindow.Split(',');
+            stringw = tmp[3];
+
+            w = Convert.ToInt32(stringw);
+
+            return w;
+        }
+        public int StringToIntLocationH()
+        {
+            string LocationOfWindow = getLocationofWindow();
+            string stringh;
+
+            string[] tmp = LocationOfWindow.Split(',');
+            stringh = tmp[2];
+
+            h = Convert.ToInt32(stringh);
+
+            return h;
+        }
 
         private void UpdateLabels()
         {
             loc = getLocationofWindow();
 
-            y = StringToIntLocationY(loc);
-            x = StringToIntLocationX(loc);
-            h = StringToIntLocationH(loc);
-            w = StringToIntLocationW(loc);
+            y = StringToIntLocationY();
+            x = StringToIntLocationX();
+            h = StringToIntLocationH();
+            w = StringToIntLocationW();
 
             label1.Text = x.ToString();
             label2.Text = y.ToString();
@@ -105,45 +123,33 @@ namespace TakeScreenshotOfWindow
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-            Screenshot(x, y, h, w);
+            Screenshot();
         }
 
-        public int StringToIntLocationY(string LocString)
+        private void StartButton_Click(object sender, EventArgs e)
         {
-            string LocationOfWindow = getLocationofWindow();
-            string stringy;
-
-            string[] tmp = LocationOfWindow.Split(',');
-            stringy = tmp[1];
-            
-            y = Convert.ToInt32(stringy);
-
-            return y;
+            Screenshot();
         }
-        public int StringToIntLocationW(string LocString)
+        
+        public void UpdateFormLocation()
         {
-            string LocationOfWindow = getLocationofWindow();
-            string stringw;
+            loc = getLocationofWindow();
 
-            string[] tmp = LocationOfWindow.Split(',');
-            stringw = tmp[3];
-            
-            w = Convert.ToInt32(stringw);
-
-            return w;
+            y = StringToIntLocationY();
+            x = StringToIntLocationX();
+            h = StringToIntLocationH();
+            w = StringToIntLocationW();
         }
-        public int StringToIntLocationH(string LocString)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            string LocationOfWindow = getLocationofWindow();
-            string stringh;
 
-            string[] tmp = LocationOfWindow.Split(',');
-            stringh = tmp[2];
-            
-            h = Convert.ToInt32(stringh);
-
-            return h;
         }
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
     }
 }
